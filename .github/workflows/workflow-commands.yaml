@@ -8,5 +8,12 @@ jobs:
         - name: Setting an error message
           run: echo "::error::Missing semicolon"
         - name: Setting an error message with prams
-          run: echo "::error title=Error title"
-  
+          run: echo "::error title=Error title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"  
+        - name: Setting an error message
+          run: echo "::error::Missing semicolon"
+        - name: Setting an debug message with prams
+          run: echo "::debug title=debug title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"  
+        - name: Setting an Warning message
+          run: echo "::Warning::Missing semicolon"
+        - name: Setting an Notice message with prams
+          run: echo "::Notice title=Notice title,file=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"  
